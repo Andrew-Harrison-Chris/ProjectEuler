@@ -47,6 +47,11 @@ end
 @time slow_factors(10000000) #runs in   0.058964 seconds (51 allocations: 1.938 KiB)
 # 308x faster with that simple trick. Nice.
 
+#or with julia magic...
+using Primes
+@time factor(600851475143) #0.000024 seconds (9 allocations: 368 bytes)
+#which gives us an additional 8x speed boost ^ :)
+
 
 fac = factors(600851475143)
 
