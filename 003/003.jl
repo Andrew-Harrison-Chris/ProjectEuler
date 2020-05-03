@@ -61,4 +61,4 @@ for i in 1:length(fac)
     end
 end
 
-println(answer)
+answer

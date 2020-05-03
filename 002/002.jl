@@ -39,4 +39,4 @@ for i in 1:length(fiblist)
     end
 end
 
-solution = sum(evenfibs)
+answer = sum(evenfibs)
