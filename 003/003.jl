@@ -1,9 +1,3 @@
-#=
-The prime factors of 13195 are 5, 7, 13 and 29.
-
-What is the largest prime factor of the number 600851475143 ?
-=#
-
 function isprime(num)
     #returns boolean value of whether number is prime or not.
     bool = true
@@ -53,12 +47,15 @@ using Primes
 #which gives us an additional 19.1x speed boost ^ :)
 
 
-fac = factors(600851475143)
+function problem003()
+    fac = factors(600851475143)
 
-for i in 1:length(fac)
-    if isprime(fac[i])
-        global answer = fac[i]
+    for i in 1:length(fac)
+        if isprime(fac[i])
+            global answer = fac[i]
+        end
     end
+    return Int(answer)
 end
 
-answer
+problem003()

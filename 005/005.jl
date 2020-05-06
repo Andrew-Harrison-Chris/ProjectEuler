@@ -1,11 +1,4 @@
-#=
-2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
-
-What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
-=#
-
-#this is wayyy too slow. 
-
+#this is wayyy too slow.
 function slow_solution(num)
     #returns the smallest number that contains all the factors 1:num
     global answer = 1
@@ -20,14 +13,12 @@ function slow_solution(num)
     return answer
 end
 
-
 using Primes
 function faster_solution(num)
     #returns the smallest number that contains all the factors 1:num
     #with a factoring approach.
     answer = 1
     while true
-        println(answer)
         facs = factor(answer)
         if all([facs[i] != 0 ? true : false for i in 1:num]) == true
             break
@@ -37,9 +28,16 @@ function faster_solution(num)
     return answer
 end
 
+slow_solution(10)
+#faster_solution(10)
+
+
+num = 2520
+facs = factor(num)
+[facs[i] != 0 ? true : false for i in 1:10]
 
 @time slow_solution(10) #0.071122 seconds (103.19 k allocations: 5.194 MiB)
-@time faster_solution(10) #0.068594 seconds (80.23 k allocations: 3.859 MiB)
+#@time faster_solution(10) #0.068594 seconds (80.23 k allocations: 3.859 MiB)
 #barely faster. We need a different way that's not brute force.
 
 
@@ -47,7 +45,7 @@ end
 # means we can cut out 1,2,3,4,5,6,7,8,9,10. Since their multiples are all contianed.
 #just check the last half? will that help?...
 using Primes
-function faster_solution_pt2(num=20)
+function faster_solution_pt2(num)
     #returns the smallest number that contains all the factors 1:num
     #with a factoring approach.
     answer = 1
@@ -63,12 +61,14 @@ function faster_solution_pt2(num=20)
     println(answer)
 end
 
-faster_solution_pt2()
+#faster_solution_pt2()
 
 
 #that didn't work.
 
 #using julia lcm is fast, but there's no multiple function.
+
+
 function multiple_lcm(arr)
     num = 1
     for i in 1:length(arr)
@@ -83,4 +83,9 @@ function multiple_lcm(arr)
     return num
 end
 #whoah that works really well.
-answer = multiple_lcm(range(1,20))
+
+function problem005()
+    multiple_lcm(range(1,20))
+end
+
+problem005()

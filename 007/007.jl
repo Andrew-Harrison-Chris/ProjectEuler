@@ -1,2 +1,7 @@
 using Primes
-answer = prime(10001)
+
+function problem007()
+    answer = prime(10001)
+end
+
+problem007()
