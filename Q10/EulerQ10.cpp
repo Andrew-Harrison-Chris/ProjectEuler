@@ -14,7 +14,7 @@ int main () {
 
     bool isPrime = true;
 
-    for (int j=0; j<primes.size() && primes[j]*primes[j] <= i; j++) {
+    for (int j=0; primes[j]*primes[j] <= i; j++) {
       if (i%primes[j] == 0) {
 	isPrime = false;
 	break;
