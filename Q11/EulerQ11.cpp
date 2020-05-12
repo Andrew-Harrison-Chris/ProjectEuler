@@ -1,6 +1,3 @@
-//this method works for small arrays so far (5x5)
-
-
 #include <iostream>
 #include <string>
 #include <sstream>
