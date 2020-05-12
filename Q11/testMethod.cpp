@@ -125,8 +125,5 @@ int main() {
   }
   cout << "Max Left Diagonal Product: " << left_diagonal_max << endl;
   
-
-
-    
   return 0;
 }
