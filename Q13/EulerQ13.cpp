@@ -138,15 +138,15 @@ int main() {
   for (int j=c-1; j>=0; j--) {
     sum = carry;
     for (int i=0; i<=r-1; i++) {
-      cout << num[i][j] << endl;
+      //cout << num[i][j] << endl;
       sum+=num[i][j];
     }
-    cout << "sum of " << j+1 << " column:  " << sum << endl;
+    //cout << "sum of " << j+1 << " column:  " << sum << endl;
     if (sum>=10) {
       final_sum.insert(final_sum.begin(), sum%10);
       carry = floor(sum/10);
-      cout << "sum%10 = " << sum%10 << endl;
-      cout << "carry = " << carry << endl;
+      //cout << "sum%10 = " << sum%10 << endl;
+      //cout << "carry = " << carry << endl;
     }
     else {
       final_sum.insert(final_sum.begin(), sum);
