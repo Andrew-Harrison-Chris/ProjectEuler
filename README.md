@@ -5,7 +5,7 @@
                 
 #### Solutions to Project Euler written in Julia 
  
- By Chris DeGrendele ``###/###.jl`
+ By Chris DeGrendele `###/###.jl`
                 
 Problem #  |     Solution  |  Time
 ---|---|---
