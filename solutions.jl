@@ -63,7 +63,7 @@ function write_to_file(answers)
             if i==1
                 println(io, "# Project Euler")
                 println(io, "#### Solutions to Project Euler written in C++ \n \n By Andrew Tuma `Q###/EulerQ###.cpp` and Harrison Hoffman `harry###.cpp`
-                \n#### Solutions to Project Euler written in Julia \n \n By Chris DeGrendele ``###/###.jl`
+                \n#### Solutions to Project Euler written in Julia \n \n By Chris DeGrendele `###/###.jl`
                 \nProblem #  | ", lpad("Solution",longest_sol, " "),"  |  Time")
                 println(io, "---|---|---")
             end
