@@ -19,7 +19,6 @@ function problem012()
     i = 1
     while true
         num_factors = length(factors(triangle_num))
-        println("Triangle Number:", triangle_num, "with # factors:", num_factors)
         if num_factors >= 500
             break
         end

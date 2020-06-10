@@ -9,4 +9,4 @@ function problem001()
     return sum(list)
 end
 
-problem001()
+#problem001()

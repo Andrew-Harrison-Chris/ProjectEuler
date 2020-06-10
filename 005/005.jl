@@ -85,7 +85,7 @@ end
 #whoah that works really well.
 
 function problem005()
-    multiple_lcm(range(1,20))
+    multiple_lcm(range(1,20,step=1))
 end
 
 problem005()
