@@ -61,14 +61,15 @@ function write_to_file(answers)
     for i in 1:length(solutions)
         open((@__FILE__)[1:end-13] * "/README.md","a") do io
             if i==1
-                println(io, "Project Euler")
-                println(io, "#### Solutions to Project Euler written in C++ \n \n By Andrew Tuma (Q###/EulerQ###.cpp) and Harrison Hoffman (harry###.cpp)
-                \n#### Solutions to Project Euler written in Julia \n \n By Chris DeGrendele (###/###.jl)
+                println(io, "# Project Euler")
+                println(io, "#### Solutions to Project Euler written in C++ \n \n By Andrew Tuma `Q###/EulerQ###.cpp` and Harrison Hoffman `harry###.cpp`
+                \n#### Solutions to Project Euler written in Julia \n \n By Chris DeGrendele ``###/###.jl`
                 \nProblem #  | ", lpad("Solution",longest_sol, " "),"  |  Time")
+                println(io, "---|---|---")
             end
 
             println(io,lpad(i,3,"0")* "        | ", lpad(solutions[i], longest_sol, " "), "  |  ",
-            lpad(times[i], 8, " "), " seconds\n")
+            lpad(times[i], 8, " "), " seconds")
 
 
             if i==length(solutions)
